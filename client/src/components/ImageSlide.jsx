@@ -3,8 +3,9 @@ import React from 'react'
 const ImageSlide = ({ url }) => {
   const styles = {
     backgroundImage: `url(${url})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+
   };
 
   return (
