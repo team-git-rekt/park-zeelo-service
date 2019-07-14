@@ -26,15 +26,14 @@ const houseGen = () => {
 
 houseGen();
 
-// const inserthomeData = () => {
+const inserthomeData = () => {
 
-//     const houses = houseGen()
-//     for (let house of houses) {
-//         houseSchema.create(house)
+    const houses = houseGen()
+    for (let house of houses) {
+        houseSchema.create(house)
 
-//     }
+    }
 
-//     Promise.all(arrayOfPromises)
-// };
+};
 
-// inserthomeData();
+inserthomeData();

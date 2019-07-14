@@ -13,7 +13,7 @@ const houseSchema = new mongoose.Schema({
   bedrooms: Number,
   bathrooms: Number,
   sqft: String,
-  address: String,
+  address: String
 })
 
 const house = mongoose.model('house', houseSchema)
