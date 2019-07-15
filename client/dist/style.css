@@ -1,4 +1,4 @@
-/* Carousel  */
+/* Carousel Styling */
 
 .carousel {
   cursor: pointer;
@@ -18,6 +18,22 @@
   width: 100%;
 }
 
+/* Arrows */
+
+.left-arrow {
+  left: 0;
+  position: absolute;
+  margin-top: 20%;
+}
+
+.right-arrow {
+  right: 0;
+  position: absolute;
+  margin-top: -22%;
+}
+
+/* Main page */
+
 .main-img {
   width: 100%
 }
@@ -29,16 +45,15 @@
   flex-wrap: wrap;
 }
 
+/* sets the sub-images at 50% width */
 .sub-img {
   width: 50%;
+  /* border: 5px solid #ddd; */
 }
 
-
-/* modal images */
 /* 
-.App {
-  font-family: sans-serif;
-  text-align: center;
+.subImages {
+  
 } */
 
 .small {
@@ -52,7 +67,6 @@
   top: 10%;
 }
 
-
 #myImg {
   border-radius: 5px;
   cursor: pointer;
@@ -60,7 +74,6 @@
 }
 
 #myImg:hover {opacity: 0.7;}
-
 
 /* The Modal (background) */
 .modal {
