@@ -3,7 +3,10 @@ const app = express();
 const port = 4000
 const bodyParser = require('body-parser')
 const houseSchema = require('../zeelo-database/houseSchema.js')
+const cors = require('cors')
 
+
+app.use(cors())
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 

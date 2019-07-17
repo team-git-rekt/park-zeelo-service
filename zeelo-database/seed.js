@@ -22,7 +22,7 @@ const houseGen = () => {
     houseArr.push(House);
   }
   // console.log(houseArr);
-  console.log(houseArr);
+  // console.log(houseArr);
   return houseArr;
 };
 
@@ -32,7 +32,7 @@ const inserthomeData = function () {
   for (const house of houses1) {
     promises.push(houseSchema.create(house));
   }
-  Promise.all(promises).then(() => db.disconnect());
+  Promise.all(promises).then(() => db.close());
 };
 
 

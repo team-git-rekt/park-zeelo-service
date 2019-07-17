@@ -18,7 +18,7 @@ class Main extends React.Component {
   }
   
   getImageUrls() {
-    axios.get('/houses1/1')
+    axios.get('http://localhost:4000/houses1/1')
     .then((response) => {
     
       this.setState({
