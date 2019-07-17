@@ -27,12 +27,12 @@ const houseGen = () => {
 };
 
 const inserthomeData = function () {
-  const houses = houseGen();
+  const houses1 = houseGen();
   const promises = [];
-  for (const house of houses) {
+  for (const house of houses1) {
     promises.push(houseSchema.create(house));
   }
-  // Promise.all(promises).then(() => db.disconnect());
+  Promise.all(promises).then(() => db.disconnect());
 };
 
 

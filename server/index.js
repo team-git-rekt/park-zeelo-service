@@ -7,7 +7,7 @@ const houseSchema = require('../zeelo-database/houseSchema.js')
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/houses/:id', (req, res) => {
+app.get('/houses1/:id', (req, res) => {
   houseSchema.find({id: req.params.id}, (err, data) => {
     // console.log(res)
     // console.log(data)
