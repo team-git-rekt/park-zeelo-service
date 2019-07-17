@@ -1,39 +1,39 @@
-// import db from './index.js'
 const db = require("./index.js");
-// import houseSchema from './houseSchema'
 const houseSchema = require("./houseSchema.js");
-const faker = require('faker')
-
-// not seeding correctly to database
-
+const faker = require("faker");
 const houseGen = () => {
   let houseArr = [];
 
-  for (let i = 1; i < 100; i++) {
+  for (let i = 1; i <= 100; i++) {
     const House = {
       id: i,
-      price: faker.finance.amount(550000, 5000000, 0),
-      bedrooms: faker.random.number({ min: 3, max: 8 }),
-      bathroom: faker.random.number({ min: 2, max: 5 }),
-      sqft: faker.random.number({ min: 1500, max: 5500 }),
-      address: `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()}`
+      images: [ "https://zeelo-images.s3-us-west-2.amazonaws.com/1.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/2.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/3.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/4.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/5.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/6.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/7.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/8.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/9.jpg",
+              "https://zeelo-images.s3-us-west-2.amazonaws.com/10.jpg"
+             ]
     };
     houseArr.push(House);
-    console.log(houseArr);
   }
+  // console.log(houseArr);
+  console.log(houseArr);
   return houseArr;
 };
 
-houseGen();
-
-const inserthomeData = () => {
-
-    const houses = houseGen()
-    for (let house of houses) {
-        houseSchema.create(house)
-
-    }
-
+const inserthomeData = function () {
+  const houses = houseGen();
+  const promises = [];
+  for (const house of houses) {
+    promises.push(houseSchema.create(house));
+  }
+  // Promise.all(promises).then(() => db.disconnect());
 };
+
 
 inserthomeData();

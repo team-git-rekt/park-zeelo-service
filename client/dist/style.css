@@ -1,14 +1,14 @@
 /* Carousel Styling */
-
 .carousel {
   cursor: pointer;
-  width: 60%;
   height: 60%;
   margin: 15% auto;
+  position: relative;
 }
 
 .image-slide {
-  height: 400px;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
 }
 
@@ -18,24 +18,37 @@
   width: 100%;
 }
 
-/* Arrows */
 
+
+/* Arrows */
 .left-arrow {
   left: 0;
   position: absolute;
-  margin-top: 20%;
+  top: 50%;
+  font-size: 75px;
+  color: white;
 }
 
 .right-arrow {
   right: 0;
   position: absolute;
-  margin-top: -22%;
+  bottom: 35.3%;
+  font-size: 75px;
+  color: white;
 }
 
-/* Main page */
+.right-arrow:hover, .left-arrow:hover,
+.right-arrow:focus, .left-arrow:focus {
+  color: lightskyblue;
+  cursor: pointer;
+}
 
+
+
+/* Main page */
 .main-img {
-  width: 100%
+  width: 100%;
+  cursor: pointer;
 }
 
 .sub-cont {
@@ -45,63 +58,48 @@
   flex-wrap: wrap;
 }
 
-/* sets the sub-images at 50% width */
+.subImages {
+  /* object-fit: fill; */
+  /* display: flex; */
+}
+
+/* sub images on main page */
 .sub-img {
   width: 50%;
-  /* border: 5px solid #ddd; */
-}
-
-/* 
-.subImages {
-  
-} */
-
-.small {
+  height: 20%;
   cursor: pointer;
 }
 
-.dialog {
-  box-shadow: 0 8px 6px -6px black;
-  position: static;
-  left: 20%;
-  top: 10%;
-}
 
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
-  /* display: none; Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed; 
+  z-index: 1; /* Sits modal on top, +1 on depth */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%; 
+  height: 100%; 
+  /* overflow: auto; Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
+
+
 
 /* The Close 'X' Button within Modal*/
 .close {
   color:white;
-  font-size: 50px;
+  font-size: 75px;
   position: absolute;
   top: 10px;
   right: 30px;

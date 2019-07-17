@@ -5,7 +5,6 @@ import ImageSlide from './ImageSlide.jsx'
 class Carousel extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       currentImageIndex: this.props.currentImageIndex
     };
@@ -40,11 +39,11 @@ class Carousel extends React.Component {
     return (
       <div className="carousel">
 
-        <Arrow className="left-arrow" direction='left' clickFunction={ this.previousSlide } glyph="&#9664;" />
+        <Arrow className="left-arrow" direction='left' clickFunction={ this.previousSlide } glyph="&#9001;" />
         
         <ImageSlide url={ this.props.imageUrls[this.state.currentImageIndex] } clickFunction={ this.nextSlide } />
 
-        <Arrow className="right-arrow" direction='right' clickFunction={ this.nextSlide } glyph='&#9654;' />
+        <Arrow className="right-arrow" direction='right' clickFunction={ this.nextSlide } glyph='&#9002;' />
 
       </div>
     );
