@@ -18,7 +18,8 @@ class Main extends React.Component {
   }
   
   getImageUrls() {
-    axios.get(`http://localhost:4000/houses1/${window.location.pathname.slice(1)}`)
+    // axios.get(`http://localhost:4000/houses1/${window.location.pathname.slice(1)}`)
+    axios.get(`http://ec2-54-174-192-32.compute-1.amazonaws.com:4000/houses1/${window.location.pathname.slice(1)}`)
     .then((response) => {
     
       this.setState({
