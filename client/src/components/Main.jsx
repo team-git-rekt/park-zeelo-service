@@ -18,7 +18,7 @@ class Main extends React.Component {
   }
   
   getImageUrls() {
-    axios.get('http://localhost:4000/houses1/1')
+    axios.get(`http://localhost:4000/houses1/${window.location.pathname.slice(1)}`)
     .then((response) => {
     
       this.setState({
@@ -38,12 +38,10 @@ class Main extends React.Component {
 
   handleToggleModal() {
     this.setState({ isOpen: !this.state.isOpen });
-    // console.log("clicked modal");
   };
 
   handleClickedImage(index) {
     return () => {
-      // console.log(index);
       this.setState( { currentImageIndex: index})
       this.handleToggleModal();
     }
