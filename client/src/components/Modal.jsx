@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel.jsx';
+import style from '../style.css'
 
 class Modal extends React.Component {
 
@@ -8,9 +9,9 @@ class Modal extends React.Component {
       <div>
         {this.props.isOpen && (
  
-          <div className="modal">
+          <div className={style["modal"]}>
             <Carousel currentImageIndex={this.props.currentImageIndex} imageUrls={this.props.imageUrls} onClick={this.handleShowDialog}/>
-            <span className="close" onClick={this.props.onClickClose}>&times;</span>
+            <span className={style["close"]} onClick={this.props.onClickClose}>&times;</span>
           </div>
 
         )}

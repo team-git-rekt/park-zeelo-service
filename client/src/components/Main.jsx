@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from './Modal.jsx'
 import axios from 'axios'
+import style from '../style.css'
 
 class Main extends React.Component {
   constructor() {
@@ -51,15 +52,15 @@ class Main extends React.Component {
   render () {
     const subImages = this.state.imageUrls.slice(1).map((subImage, index) => {
       return (
-       <img className="sub-img" src={ subImage } onClick={this.handleClickedImage(index + 1)} />
+       <img className={style["sub-img"]} src={ subImage } onClick={this.handleClickedImage(index + 1)} />
       )
     });
   
     return (
-      <div className="main" >
-          <img className="main-img" src={ this.state.imageUrls[0] } onClick={this.handleClickedImage(0)} />
-        <div className="sub-cont" >
-          <span className="subImages">{subImages}</span>
+      <div className={style["main"]} >
+          <img className={style["main-img"]} src={ this.state.imageUrls[0] } onClick={this.handleClickedImage(0)} />
+        <div className={style["sub-cont"]} >
+          <span className={style["subImages"]}>{subImages}</span>
         </div>
         <Modal currentImageIndex={this.state.currentImageIndex} onClickClose={this.handleToggleModal} isOpen={this.state.isOpen} imageUrls={this.state.imageUrls}/>
       </div>
