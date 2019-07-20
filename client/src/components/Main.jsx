@@ -52,7 +52,7 @@ class Main extends React.Component {
   render () {
     const subImages = this.state.imageUrls.slice(1).map((subImage, index) => {
       return (
-       <img className={style["sub-img"]} src={ subImage } onClick={this.handleClickedImage(index + 1)} />
+       <img className={style["sub-img"]} src={ subImage } onClick={this.handleClickedImage(index + 1)} key={index} />
       )
     });
   
