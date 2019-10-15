@@ -19,7 +19,7 @@ class Main extends React.Component {
   }
   
   getImageUrls() {
-    // axios.get(`http://localhost:4000/houses1/${window.location.pathname.slice(1)}`)
+    // axios.get(`http://localhost:4000/houses1/${window.location.pathname.slice(1)}`) * use when hosted locally *
     axios.get(`http://ec2-54-174-192-32.compute-1.amazonaws.com:4000/houses1/${window.location.pathname.slice(1)}`)
     .then((response) => {
     
@@ -27,7 +27,7 @@ class Main extends React.Component {
         imageUrls: [
           ...response.data[0].images
         ]
-      }) 
+      })
     })
     .catch(function (error) {
       console.log(error)

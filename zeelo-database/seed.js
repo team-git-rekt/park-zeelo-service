@@ -1,6 +1,7 @@
 const db = require("./index.js");
 const houseSchema = require("./houseSchema.js");
 const faker = require("faker");
+
 const houseGen = () => {
   let houseArr = [];
 
@@ -31,10 +32,8 @@ const inserthomeData = function () {
     promises.push(houseSchema.create(house));
   }
   Promise.all(promises)
-    // .then(console.log)
     .then(() => houseSchema.find({}, console.log))
     .catch(console.error)
-
 };
 
 

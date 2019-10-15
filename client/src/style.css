@@ -18,8 +18,6 @@
   width: 100%;
 }
 
-
-
 /* Arrows */
 .left-arrow {
   left: 0;
@@ -43,8 +41,6 @@
   cursor: pointer;
 }
 
-
-
 /* Main page */
 .main-img {
   width: 100%;
@@ -59,8 +55,8 @@
 }
 
 .subImages {
-  /* object-fit: fill; */
-  /* display: flex; */
+  object-fit: fill;
+  display: flex;
 }
 
 /* sub images on main page */
@@ -69,8 +65,6 @@
   height: 20%;
   cursor: pointer;
 }
-
-
 
 /* The Modal (background) */
 .modal {
@@ -81,8 +75,8 @@
   width: 100%; 
   height: 100%; 
   /* overflow: auto; Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7); 
 }
 
 /* Modal Content/Box */
@@ -93,8 +87,6 @@
   border: 1px solid #888;
   width: 80%; 
 }
-
-
 
 /* The Close 'X' Button within Modal*/
 .close {
