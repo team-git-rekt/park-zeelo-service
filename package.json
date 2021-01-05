@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/team-git-rekt/park-zeelo-service#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "@babel/core": "^7.4.5",
     "babel-loader": "^8.0.6",
     "@babel/preset-env": "^7.4.5",
